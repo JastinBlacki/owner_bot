@@ -1,0 +1,23 @@
+[
+    {
+        "Brand": "Марка1",
+        "Company": 1,
+        "Driver": 4,
+        "Registration_number": 1,
+        "Sensors": "1"
+    },
+    {
+        "Brand": "Марка2",
+        "Company": 2,
+        "Driver": 5,
+        "Registration_number": 2,
+        "Sensors": "2"
+    },
+    {
+        "Brand": "Марка3",
+        "Company": 1,
+        "Driver": 7,
+        "Registration_number": 3,
+        "Sensors": "9"
+    }
+]

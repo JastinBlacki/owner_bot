@@ -1,0 +1,30 @@
+[
+    {
+        "Breakdown_frequency": 0.5,
+        "Describe_driver": "описание",
+        "ID_driver": 4,
+        "Rating": 10,
+        "Type": "сдулось колесо"
+    },
+    {
+        "Breakdown_frequency": 0.32,
+        "Describe_driver": "описание",
+        "ID_driver": 5,
+        "Rating": 2,
+        "Type": "сдулось колесо"
+    },
+    {
+        "Breakdown_frequency": "0,7",
+        "Describe_driver": "описание",
+        "ID_driver": 6,
+        "Rating": 11,
+        "Type": "неисправные тормоза"
+    },
+    {
+        "Breakdown_frequency": "0,1",
+        "Describe_driver": "описание",
+        "ID_driver": 7,
+        "Rating": 1,
+        "Type": "неисправные тормоза"
+    }
+]

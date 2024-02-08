@@ -1,0 +1,47 @@
+[
+    {
+        "ID_sensors": 1,
+        "Readings": "15",
+        "Type": "Температура"
+    },
+    {
+        "ID_sensors": 2,
+        "Readings": "325 ",
+        "Type": "Давление"
+    },
+    {
+        "ID_sensors": 3,
+        "Readings": "0",
+        "Type": "Колесо"
+    },
+    {
+        "ID_sensors": 4,
+        "Readings": "1",
+        "Type": "Колесо"
+    },
+    {
+        "ID_sensors": 5,
+        "Readings": "0",
+        "Type": "Колесо"
+    },
+    {
+        "ID_sensors": 6,
+        "Readings": "0",
+        "Type": "Колесо"
+    },
+    {
+        "ID_sensors": 7,
+        "Readings": "1",
+        "Type": "Колесо"
+    },
+    {
+        "ID_sensors": 8,
+        "Readings": "1",
+        "Type": "Колесо"
+    },
+    {
+        "ID_sensors": 9,
+        "Readings": "21",
+        "Type": "Температура"
+    }
+]

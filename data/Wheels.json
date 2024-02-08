@@ -1,0 +1,38 @@
+[
+    {
+        "Brand": "марка1",
+        "Car_number": 1,
+        "ID_wheel": 1,
+        "Sensors": 3
+    },
+    {
+        "Brand": "марка 2",
+        "Car_number": 2,
+        "ID_wheel": 2,
+        "Sensors": 4
+    },
+    {
+        "Brand": "марка 2",
+        "Car_number": 3,
+        "ID_wheel": 3,
+        "Sensors": 5
+    },
+    {
+        "Brand": "марка 2",
+        "Car_number": 3,
+        "ID_wheel": 4,
+        "Sensors": 6
+    },
+    {
+        "Brand": "марка1",
+        "Car_number": 2,
+        "ID_wheel": 5,
+        "Sensors": 7
+    },
+    {
+        "Brand": "марка1",
+        "Car_number": 1,
+        "ID_wheel": 6,
+        "Sensors": 8
+    }
+]
