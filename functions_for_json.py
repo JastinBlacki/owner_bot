@@ -35,21 +35,25 @@ def registered_users_password(type_):
     return pas_users
 
 
+# получение всех водителей компании
 def get_inf_users(company_id, type_):
     return ([(i.get("ID_user"), i.get("Full name"), i.get("Birthday")) for i in users
              if i.get('Type') == type_ and i.get("Company") == company_id])
 
 
+# получение списка машин по опред.признаку
 def get_car(inf, type_):
     return [i.get("Registration_number") for i in cars if int(i.get(type_)) == int(inf)]
 
 
+# получение инфы по опред.машинам
 def get_inf_car(id_car):
     return [(i.get('Registration_number'), i.get('Driver'), i.get('Brand')) for i in cars if i.get('Registration_number') in id_car]
 
 
+# получить инфу по дефектам по опред.признаку
 def get_defects_driver_car(value, type_):
-    return [(i.get("Type"), i.get("describe")) for i in defects if str(i.get(type_)) == str(value)]
+    return [(i.get("Type1"), i.get("describe")) for i in defects if str(i.get(type_)) == str(value)]
 
 
 def get_by_id(id_, inf):

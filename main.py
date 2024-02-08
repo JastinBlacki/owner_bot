@@ -19,6 +19,7 @@ def is_registered(message):
     if str(message.text) in registered_drivers:
         id_owner = get_id_user_login(message.text)
         global owner
+        # экземпляр класса со всей инфой о текущем пользователе
         owner = Owner(id_owner, get_by_id(id_owner, "Full name"), get_by_id(id_owner, "Company"))
         bot.send_message(chat_id, "Введите пароль")
         bot.register_next_step_handler(message, pass_login_drivers)
@@ -41,6 +42,7 @@ def help_message(message):
                                       "Удалить водителя - /delete_driver")
 
 
+# получить всех водителей компании владельца
 @bot.message_handler(commands=['all_drivers'])
 def get_all_drivers(message):
     res = ""
@@ -49,6 +51,7 @@ def get_all_drivers(message):
     bot.send_message(message.chat.id, res)
 
 
+# получить все машины компании владельца
 @bot.message_handler(commands=['car'])
 def get_all_cars(message):
     car_id = get_car(owner.company, "Company")
@@ -76,6 +79,7 @@ def delete_driver_json(message):
     delete_by_id(id_driver)
 
 
+# добавление пользователя (записываем всю инфу в словарь)
 def add_drivers_json(message):
     id_ = get_id_df()
     login, password, name, birthday = message.text.split(", ")
@@ -85,6 +89,7 @@ def add_drivers_json(message):
     bot.send_message(message.chat.id, "Водитель добавлен")
 
 
+# получить дефекты опред.пользователя (тип отчет), но оно пока нигде не используется, просто функция
 def get_defects(message):
     mes_ = ""
     report_ = get_defects_driver_car(str(message.text), 'driver_id')
