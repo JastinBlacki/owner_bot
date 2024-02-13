@@ -79,3 +79,42 @@ def delete_by_id(id_driver):
     del users[int(id_driver[0]) - 1]
     json.dump(users, open('data/Users.json', 'w'))
 
+
+def is_sign_in(chat_id):
+    with open('sign_in_users.json', 'r') as file:
+        registered_users = json.load(file)
+        return str(chat_id) in list(registered_users.keys())
+
+def add_user_log(chat_id, login):
+    if not is_sign_in(chat_id):
+        with open('sign_in_users.json', 'r') as file:
+            registered_users = json.load(file)
+
+        registered_users[chat_id] = str(login)
+
+        with open('sign_in_users.json', 'w') as file:
+            json.dump(registered_users, file)
+
+
+def get_login(chat_id):
+    chat_id = str(chat_id)
+    with open('sign_in_users.json', 'r') as file:
+        registered_users = json.load(file)
+        if chat_id in list(registered_users.keys()):
+            return registered_users[chat_id]
+        
+
+def del_user_log(chat_id):
+    if is_sign_in(chat_id):
+        with open("sign_in_users.json", "r") as json_file:
+            data = json.load(json_file)
+
+        chat_id = str(chat_id)
+
+        # Находим запись, которую нужно удалить (например, по ключу)
+        if chat_id in data:
+            del data[chat_id]
+
+        # Сохраняем обновленные данные в файл
+        with open("sign_in_users.json", "w") as json_file:
+            json.dump(data, json_file)
